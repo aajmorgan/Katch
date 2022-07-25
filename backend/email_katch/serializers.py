@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Email
+from .models import User
 
-class EmailSerializer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Email
-        fields = ['email']
+        model = User
+        fields = ['email', 'name']
