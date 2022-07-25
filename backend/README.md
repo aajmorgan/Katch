@@ -1,6 +1,6 @@
 ## github doesn't like it when i put the secret key on here
 
-so create a file called .env and you'll wanna put
+so create a file in backend/backend called .env and you'll wanna put
 
 ```python
 SECRET_KEY = ''
