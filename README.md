@@ -28,10 +28,9 @@ In katch-frontend, run this command to install dependencies
 npm install
 ```
 
-In backend, import these
+In backend, with venv running
 ```bash
-pip install django
-pip install djangorestframework
+pip install -r requirements.txt
 ```
 
 And you should be good to go
