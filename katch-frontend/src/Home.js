@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Button, Box, Typography, TextField } from "@mui/material/"
 import axios from "axios"
 
-export default function Home () {
+export default function Home ({ setSubmit }) {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -13,31 +13,16 @@ export default function Home () {
             `http://127.0.0.1:8000/adduser/`, {email: email, name: name}
         ).then(response => {
             setShow({email: email, name: name});
-            console.log(response.data)
+            console.log(response.data);
+            setSubmit(true);
         }).catch((err) => {
-            console.log('what')
+            console.log('what');
+            console.log(err.data)
         })
-    }
-
-    const Navbar = () => {
-        return (
-            <Box sx={{
-                width:"100vw",
-                height:"10vh",
-                bgcolor:"black",
-                color:"white",
-                display:"flex",
-                justifyContent:"center",
-                alignItems:"center"
-            }}>
-                <Typography fontSize={30}>K A T C H</Typography>
-            </Box>
-        )
     }
 
     return (
         <Box>
-            <Navbar />
             <Box 
                 display="grid"
                 justifyContent="center"
